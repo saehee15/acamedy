@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적처리</title>
+</head>
+<body>
+    이름: <input type="text" id="name"> <br/>
+    국어: <input type="text" id="kor"> <br/>
+    수학: <input type="text" id="eng"> <br/>
+    영어: <input type="text" id="mat"> <br/>
+    총점: <input type="text" id="total"> <br/>
+    평균: <input type="text" id="ava"> <br/>
+    <span id="result"></span><br/>
+    <button type="button" onclick="cal()">확인</button>
+</body>
+</html>
+<script>
+  function cal(){
+      var name = document.getElementById("name").value;
+      var kor = document.getElementById("kor").value;
+      var eng = document.getElementById("eng").value;
+      var mat = document.getElementById("mat").value;
+
+      var arr = [parseInt(kor), parseInt(eng), parseInt(mat)]
+      total += arr;
+      ava = total/ arr.length;
+
+      document.getElementById("total").value = total;
+      document.getElementById("ava").value = ava;
+
+      document.getElementById("result").innerHTML = `${name}의 총점은 ${total}이고, 평균은 ${ava}입니다.`
+  }
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 내가  -->
+    파운드: <input type="type" id="ib"> - kg: <input type="type" id="kg"> <br/>
+    <button type="button" onclick="cal()">환산하기</button> <br /><br /><br />
+   
+    <!-- 선생님  -->
+
+    파운드: <input type="type" id="pound1"> 
+    <button type="button" onclick="goPountTokg()">=></button> 
+    kg: <input type="type" id="kg1"> <br/>
+
+    kg: <input type="type" id="kg2"> 
+    <button type="button" onclick="goKgToPound()">=></button> 
+    파운드: <input type="type" id="pound2"> <br/>
+</body>
+</html>
+<!-- 단위환산 파운드 => kg  kg =>파운드 -->
+<script>
+    // 내가 한 거
+    function cal(){
+        var ib = document.getElementById("ib").value;
+        var kg = document.getElementById("kg").value;
+
+        if(ib == "" && kg !== ""){
+            document.getElementById("ib").value = kg * 2.2046;
+            console.log(1);
+        } else if( ib !== "" && kg == "" ){
+            document.getElementById("kg").value =  ib / 2.2046;
+         console.log(2);
+        }
+         else if(ib == "" && kg == ""){
+             alert("값을 하나만 입력해 주세요");
+         } else {
+             alert("값을 하나 입력해주세요");
+         }
+    }
+    // 선생님이 한거 
+    function goPountTokg(){
+        // kg = p/2.2046
+        pound = document.getElementById("pound1").value;
+        kg = pound/2.2046;
+        document.getElementById("kg1").value = kg;
+    }
+    function goKgToPound(){
+        kg =  document.getElementById("kg2").value;
+        pound = kg * 2.2046
+        document.getElementById("pound2").value = pound;
+    }
+
+</script>

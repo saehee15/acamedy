@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    x값: <input type="type" id="x"> <br />
+    y값: <input type="type" id="y"> <br />
+
+    <!-- 버튼 위에 result를 두면은 버튼 클릭 후 버튼이 사라지는 문제 발생 -->
+    <!-- innerHTML 요소를 싹 바꾸기 때문? innerText도?-->
+    <!-- 밑에 버튼 뿐만 아니라 글넣고, 돌려도 사라지네  -->
+    <!-- 만약 아래처럼 result도 input으로 하고,  스크립트 부분에 innerHTML 대신 value 쓰면은 안사라짐 -->
+    <!-- result: <span type="type" id="result"> <br /> -->
+
+    <!-- result: <input type="type" id="result"> <br />  input으로 바꾼 예시-->   
+    <!-- 1123123123 글씨도 사라지는지 확인 -->
+    <button type="button" onclick="check()">분면 체크</button>  <br />
+
+    result: <span type="type" id="result"> <br />
+</body>
+</html>
+<script>
+    function check() {
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        var result = "";
+
+        if (x == 0 && y == 0) {
+            result = `(${x},${y})는 원점입니다.`;
+        } else if (x == 0 && y !== 0) {
+            result =  `(${x},${y})는 ${y}입니다.`;
+        } else if (x !== 0 && y == 0) {
+            result =  `(${x},${y})는 ${x}입니다.`;
+        } else if (x > 0 && y > 0) {
+            result = `(${x},${y})는 1사분면 입니다.`;
+        } else if (x > 0 && y < 0) {
+            result =`(${x},${y})는 2사분면 입니다.`;
+        } else if (x < 0 && y > 0) {
+            result = `(${x},${y})는 4사분면 입니다.`;
+        } else if (x < 0 && y < 0) {
+            result = `(${x},${y})는3사분면 입니다.`;
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합계구하기2</title>
+</head>
+
+<body>
+    <input type="text" id="startNum"> ~ <input type="text" id="endNum"> 까지 <input type="text" id="addNum"> 만큼 증가했을때
+    <br />
+    합계액은? <span id="result"></span> <br />
+
+    <button type="button" onclick="cal()">sum</button>
+
+</body>
+
+</html>
+<script>
+    function cal() {
+        var startNum = parseInt(document.getElementById("startNum").value);
+        var endNum = parseInt(document.getElementById("endNum").value);
+        var addNum = parseInt(document.getElementById("addNum").value);
+        var sum = 0;
+       
+        var result=""
+        for (i = startNum; i <= endNum; i += addNum) {
+
+            sum += i;
+            if( i<= endNum-addNum){
+                result = result + `${i}+`;
+            } else{
+                result = result + `${i}=${sum}`;
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>

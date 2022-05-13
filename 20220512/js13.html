@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    x : <input type="text" id="x"> <br />
+    y : <input type="text" id="y"> <br /><br />
+    result: <input type="text" id="result"> <br /> <br />
+
+    <button type="button" onclick="cal('add')">더하기</button>
+    <button type="button" onclick="cal('subtract')">빼기</button>
+    <button type="button" onclick="cal('multiply')">곱하기</button>
+    <button type="button" onclick="cal('division')">나누기</button>
+</body>
+</html>
+<script>
+    // function add(){
+    //     // 1. id가 x인 input 태그로부터 값을 읽어온다.
+    //     var x = document.getElementById("x").value;
+    //     var y = document.getElementById("y").value;
+    //     // input 태그는 값이 value, 그 밖에 태그는 innerHTML
+
+    //     // 2. 연산
+    //     var result = parseInt(x) + parseInt(y);
+
+    //     // 3. 출력하기
+    //     document.getElementById("result").value = result;
+    // }
+
+    // function subtract(){
+    //     var x = document.getElementById("x").value;
+    //     var y = document.getElementById("y").value;
+
+    //     var result = parseInt(x) - parseInt(y);
+
+    //     document.getElementById("result").value = result;
+    // }
+    // function multiply(){
+    //     var x = document.getElementById("x").value;
+    //     var y = document.getElementById("y").value;
+
+    //     var result = parseInt(x) * parseInt(y);
+
+    //     document.getElementById("result").value = result;
+    // }
+    // function division(){
+    //     var x = document.getElementById("x").value;
+    //     var y = document.getElementById("y").value;
+
+    //     var result = parseInt(x) / parseInt(y);
+
+    //     document.getElementById("result").value = result;
+    // }
+
+    function cal(i){
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        var result;
+        
+        if(i == 'add'){
+            result = parseInt(x) + parseInt(y);
+        } else if(i == 'subtract'){
+            result = parseInt(x) - parseInt(y);
+        }  else if(i == 'multiply'){
+            result = parseInt(x) * parseInt(y);
+        }  else if(i == 'division'){
+            result = parseInt(x) / parseInt(y);
+        }
+
+        document.getElementById("result").value = result;
+    }
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    단: <input type="text" id="number"><br />
+    <button type="button" onclick="cal1()">구구단</button> <br/>
+    <span id="result"></span>
+</body>
+</html>
+<script>
+ // 4단 
+ // 4 X 1 = 4
+
+ // 내 코드
+ // 왜 이거는 하나만 되는거여???!!!!!!!!!!!
+ function cal(){
+    var number = parseInt(document.getElementById("number").value);
+    // var result = document.getElementById("result").innerHTML;
+     for(i =2; i<= 9; i++){
+         result =  number * i;
+         console.log(number, i);
+         document.getElementById("result").innerHTML = `${number} X ${i} = ${result}`
+     }
+ }
+
+
+ // 선생님 코드 
+ function cal1(){
+    var dan = parseInt(document.getElementById("number").value);
+    result= ""
+    for(i=1; i<=10; i++){
+        result = result + `${dan} X ${i} = ${dan*i} <br/>`;
+    }
+     document.getElementById("result").innerHTML = result;
+ }
+
+</script>

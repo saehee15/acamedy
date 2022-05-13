@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1 ~ <input type="input" id="number"> 까지의 합계는? <span id="result"></span> <br />
+    <button type="button" onclick="cal()">sum</button> <br/>
+</body>
+</html>
+<script>
+    // html에서 숫자 받아와서 1 ~ 숫자 까지의 합계액 구하기
+    function cal(){
+      var number = document.getElementById("number").value;
+      var sum = 0;
+      for(i = 1; i <= number; i++){
+        sum += i
+      }
+      document.getElementById("result").innerHTML = sum;
+    }
+  </script>

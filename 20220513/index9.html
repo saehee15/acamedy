@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>while문 처리1</h1>
+</body>
+</html>
+<script>
+/* 
+for(1. 변수 초기화; 2. 조건식; 3. 증감식){
+}
+
+1. 변수초기화
+while(2.조건식) // 조건식이 참인동안
+{
+    처리
+    3. 증감식이 와서 조건식의 결과가 false로 되어야 종료한다.
+}
+
+*/
+
+// for문 while문 차이
+
+i=1;
+while(i<10){
+    console.log(i);
+    i = i+1
+}
+
+// 문제1. 1~100까지 10, 20,30 .... 출력
+
+i=10;
+while(i<=100){
+    console.log(i);
+    i = i+10
+}
+
+// 문제2. 1~100까지 중에 7의 배수의 개수 구하기
+
+count = 0;
+i=1;
+while(i<=100){
+    if(i%7==0)
+        count++;
+       i++;
+
+}
+console.log(count);
+
+// // 문제3. 1~100까지 중에 각각 짝수와 홀수의 합계 구하기
+odd_sum =0;
+even_sum =0;
+i=1;
+while(i<=100){
+    if(i%2==0)
+        even_sum = even_sum + i;
+    else
+        odd_sum = odd_sum + i;
+    i++
+}
+console.log("짝수의 합:", even_sum);
+console.log("홀수의 합:", odd_sum);
+
+// 1~10까지의 합계 구하기
+sum = 0;
+i =1;
+while(i<=10){
+    sum = sum+i;
+    i++; // 꼭 있어야함 무한루프 돌아
+}
+console.log("합계:", sum);
+</script>

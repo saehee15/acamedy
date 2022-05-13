@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타입 불린형</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let x = 10;
+    console.log( `${x} > 10 ${x > 10}`);
+    console.log( `${x} >= 10 ${x >= 10}`);
+    console.log( `${x} < 10 ${x < 10}`);
+    console.log( `${x} <= 10 ${x <= 10}`);
+    console.log( `${x} == 10 ${x == 10}`);   // 결과값 true
+    console.log( `${x} != 10 ${x != 10}`);   // 결과값 false
+
+    console.log( `${x} === 10 ${x === 10}`);  // 결과값 true
+    console.log( `${x} !== 10 ${x !== 10}`);  // 결과값 false
+
+    
+    // 0 - 숫자형, false - boolean형 false를 0바꿔서 비교, 형태를 한쪽을 바꿔서 강제로 맞춤 
+    // 따라서 밑에 === 새로 만듬
+    if( 0 == false){    
+        console.log("같다");
+    } else {
+        console.log("다르다");
+    }
+
+    // 자동으로 형 변환 하지 않음, 값도 같고, 형도 같아야 한다.
+    if( 0 === false){    
+        console.log("같다");
+    } else {
+        console.log("다르다");
+    }
+
+</script>

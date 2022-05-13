@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>외부 js연결</title>
+    <script src="./js/common.js"></script>
+</head>
+<body>
+    <button type="button" onclick="hello('헬로우')">헬로우</button>
+</body>
+</html>
+<script>
+    hello("안녕하세요") // hello 자체는 common.js에 있는 함수이다.
+
+    // 컴파일 언어와 인터프리터 언어의 차이점
+    // 컴파일 언어는 전체 코드를 번역한 후 오류가 없으면 실행 가능하다 (자바, C)
+    // 인터프리터 언어는 한줄 읽어서 문제가 없으면 바로 실행, 다음중에 오류가 있던 없던 상관하지 않는다.
+    // 보통 인터프리터 언어는 변수를 사용하기 전에 미리 선언할 필요가 없다. 대표적으로 자바스크립느, 파이썬
+    // 이게 좋은거 같지만 코드가 길어지면 변수를 선언하지 않고 썼을 경우 단순 오타에 의해서도 결과가 달라지므로 문제가 심각해진다. 
+    // 그래서 자바스크립트도 변수를 선언하자 라고 해서 만든 문법이 엄격모드이다.
+
+</script>
