@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //배열 - 하나의 이름으로 데이터를 여러개 저장 가능한 구조
+    let flower = ["작약", "모란", "목련","장미","국화"];
+    console.log("데이커 크기:", flower.length);
+    console.log(flower[0]); // 인덱스, 인덱스는 항상 0부터 시작한다.
+    console.log(flower[1]);
+    console.log(flower[2]);
+    console.log(flower[3]);
+    console.log(flower[4]);
+
+    console.log(flower);
+
+    console.log("for")
+    for(i=0; i<flower.length; i++){ // <=가 되면은 안됨
+        console.log(flower[i]);
+    } 
+
+    console.log("while")
+    i=0;
+    while(i<flower.length){
+        console.log(flower[i]);
+        i++;
+    }
+
+    // 역순으로 출력하기
+    console.log("거꾸로 for")
+    for(i=flower.length-1; i>=0; i--){ 
+        console.log(flower[i]);
+    }
+
+    console.log("거꾸로 while")
+    i=flower.length-1;
+    while(i>=0){
+        console.log(flower[i]);
+        i--;
+    }
+
+    // 배열에 새로 추가된 문법 - 앞으로 이걸 더 많이 쓴다.
+    // 인덱스 in 배열
+    for(i in flower){ 
+        console.log(i, flower[i]);
+    } 
+
+    // of 연산자 인덱스 아니라 데이터 항목
+    for(item of flower){
+        console.log(item);
+    }
+
+    // 배열에 추가된 사항들 - 앞으로 대세(모든 언어)
+    flower.forEach((i)=>{
+        console.log(i)
+    })
+
+    // 정수 배열 요소의 합계 구하기
+    let nums = [1,3,4,5,6,7,8,9,11,12]
+    // for in
+    var sum =0;
+    for(i in nums){
+        sum += nums[i];
+    }
+    console.log(sum);
+
+    // for of
+    sum = 0;
+    for(i of nums){
+        sum += i;
+    }
+    console.log(sum);
+
+    // forEach
+    sum = 0;
+    nums.forEach((i)=>{
+        sum += i
+    })
+    console.log(sum);
+</script>

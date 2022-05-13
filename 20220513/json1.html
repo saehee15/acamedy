@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // json방식 (키: 값, 키2: 값2, 키3: 값3 .....)
+    var person ={"name":"홍길동", "age":12, "phone":"010-0000-0000"};
+
+    console.log(person["name"]);
+    console.log(person["age"]);
+    console.log(person["phone"]);
+
+    // 위랑 같은 문법
+    console.log(person.name);
+    console.log(person.age);
+    console.log(person.phone);
+
+    // 키에 "",'', 안해도 됨
+    var student = {"name": "임꺽정", "kor": 90, eng: 80, mat: 90}
+    student["total"] = student.kor + student.eng + student.mat;
+
+    console.log(student.kor, student.eng, student.mat, student.total);
+
+    var stList = [
+            {name: "임꺽정", "kor": 100, eng: 100, mat: 100},
+            {name: "홍길동", "kor": 90, eng: 70, mat: 80},
+            {name: "유재석", "kor": 80, eng: 60, mat: 80},
+            {name: "나애리", "kor": 60, eng: 50, mat: 90},
+            {name: "김혜수", "kor": 50, eng: 60, mat: 100},
+            {name: "하하", "kor": 30, eng: 70, mat: 90}
+    ]
+
+    // 내가
+    for(i=0; i< stList.length; i++){
+        student.total = stList[i].kor + stList[i].eng  + stList[i].mat ;
+        student.avg = Math.round((stList[i].kor + stList[i].eng  + stList[i].mat)/3);
+        console.log( stList[i].name, student.total, student.avg);
+    }
+
+    // 선생님
+    // 총점과 평균 구하고
+    for(a in stList){
+        stList[a]["total"] = stList[a]["kor"] + stList[a]["eng"] + stList[a]["mat"] ;
+        stList[a]["total"] = stList[a]["total"] /3;
+    }
+    // 출력
+    for(a in stList){
+        console.log(stList[a]["name"],stList[a]["total"], stList[a]["total"])
+    }
+
+
+    for(a of stList){ // of는 배열 이름이 없어짐
+        a["total"]= a["kor"] + a["eng"] + a["mat"];
+        a["avg"] = a["total"] /3;
+    }
+    // 출력
+    for(a of stList){
+        console.log(a["name"],a["total"], a["avg"]);
+    }
+
+
+</script>
