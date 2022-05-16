@@ -9,48 +9,46 @@
 </head>
 
 <body>
-    <button type="button" id="color1">red</button>
-    <button type="button" id="color2">green</button>
-    <button type="button" id="color3">pink</button>
-    <button type="button" id="color4">blue</button>
+    <button type="button" id="1">red</button>
+    <button type="button" id="2">green</button>
+    <button type="button" id="3">pink</button>
+    <button type="button" id="4">blue</button>
     <span id="result"></span>
 </body>
 
 </html>
 <script>
     // 레드 그린 블루 버튼 등등등, 버튼 누르면 그 색깔로 배경색깔 바꾸기
-    document.body.style.background = "#00000";
+    // document.body.style.background = "#00000";
 
-    red = document.getElementById("color1");
-    red.addEventListener("click", function (e) {
-        document.body.style.background = "red";
-    });
-    green = document.getElementById("color2");
-    green.addEventListener("click", function (e) {
-        document.body.style.background = "green";
-    });
-    pink = document.getElementById("color3");
-    pink.addEventListener("click", function (e) {
-        document.body.style.background = "pink";
-    });
-    blue = document.getElementById("color4");
-    blue.addEventListener("click", function (e) {
-        document.body.style.background = "blue";
-    });
+    // red = document.getElementById("color1");
+    // red.addEventListener("click", function (e) {
+    //     document.body.style.background = "red";
+    // });
+    // green = document.getElementById("color2");
+    // green.addEventListener("click", function (e) {
+    //     document.body.style.background = "green";
+    // });
+    // pink = document.getElementById("color3");
+    // pink.addEventListener("click", function (e) {
+    //     document.body.style.background = "pink";
+    // });
+    // blue = document.getElementById("color4");
+    // blue.addEventListener("click", function (e) {
+    //     document.body.style.background = "blue";
+    // });
 
 
-    // 리팩토링 하는중
-    // let idArray = ["color1", "color2", "color3", "color4"]
-    // let btnArray = [];
-    // for (i = 0; i < idArray.length; i++) {
-    //     btnArray.push(document.getElementById(idArray[i]).innerHTML);
-    // }
-    // for (i = 0; i < idArray.length; i++) {
-    //     btnArray.addEventListener("click", (e) => {
-    //         document.body.style.background = e.target.style.background;
-    //     })
-    // }
-    // console.log(btnArray)
-    // var color = document.getElementById("color1").innerText;
-    // console.log(color)
+    // 리팩토링
+    for (i = 1; i <= 4; i++) {
+        var c = document.getElementById(i);
+        color = c.innerHTML
+        console.log(c.innerHTML)
+        
+        c.addEventListener("click", () => {
+            document.body.style.background = color // color 파란색만 가져옴
+        });
+
+    }
+
 </script>

@@ -55,6 +55,7 @@
         btnArray.push(document.getElementById(idArray[i]));
     }
     for (i = 0; i < idArray.length; i++) {
+        console.log(btnArray[i])
         btnArray[i].addEventListener("click", (e) => {
             document.body.style.background = e.target.style.background;
         })
