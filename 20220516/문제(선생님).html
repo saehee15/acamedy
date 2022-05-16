@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" id="btnRed" style="background: red;">red</button>
+    <button type="button" id="btnGreen" style="background: green;">green</button>
+    <button type="button" id="btnPink" style="background: pink;">pink</button>
+    <button type="button" id="btnBlue" style="background: blue;">blue</button>
+    <span id="result"></span>
+</body>
+
+</html>
+<script>
+    // 레드 그린 블루 버튼 등등등, 버튼 누르면 그 색깔로 배경색깔 바꾸기
+    // 선생님 코드
+    let btnRed = document.getElementById("btnRed");
+    let btnGreen = document.getElementById("btnGreen");
+    let btnPink = document.getElementById("btnPink");
+    let btnBlue = document.getElementById("btnBlue");
+
+    btnRed.addEventListener("click", (e) => {
+        document.body.style.background = e.target.style.background;
+    })
+    btnGreen.addEventListener("click", (e) => {
+        document.body.style.background = e.target.style.background;
+    })
+    btnPink.addEventListener("click", (e) => {
+        document.body.style.background = e.target.style.background;
+    })
+    btnBlue.addEventListener("click", (e) => {
+        document.body.style.background = e.target.style.background;
+    })
+
+    // 더 간결하게!
+    changeColor = (e) => {
+        document.body.style.background = e.target.style.background;
+    }
+
+    btnRed.addEventListener("click", changeColor);
+    btnGreen.addEventListener("click", changeColor);
+    btnPink.addEventListener("click", changeColor);
+    btnBlue.addEventListener("click", changeColor);
+
+    // 
+    let idArray = ["btnRed", "btnGreen", "btnPink", "btnBlue"]
+    let btnArray = [];
+    for (i = 0; i < idArray.length; i++) {
+        btnArray.push(document.getElementById(idArray[i]));
+    }
+    for (i = 0; i < idArray.length; i++) {
+        btnArray[i].addEventListener("click", (e) => {
+            document.body.style.background = e.target.style.background;
+        })
+    }
+</script>

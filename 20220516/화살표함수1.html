@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let nums = [3, 6, 8, 9, 11, 14, 15, 17, 20, 23, 24];
+
+    // 짝수만 출력하고 싶다
+    for (i = 0; i < nums.length; i++) {
+        if (nums[i] % 2 == 0) {
+            console.log(nums[i]);
+        }
+    }
+
+    // forEach 함수: 배열구조에 추가된 함수, 배열의 요소마다 한번씩 호출되는데
+    // 콜백함수를 매개변수로 가져간다. forEach에 전달되는 콜백함수 값을 반환하지 않고,
+    // 배열의 요소 하나를 갖는 함수를 보낼 수 있다. 보통 차례대로 데이터를 출력하고자 할때 사용한다.
+    nums.forEach((n) => {
+        if (n % 2 == 0) {
+            console.log(n);
+        }
+    })
+    // filter - 매개변수 하나 논리식 변환, true면 엘리먼트를 외부로 보낸다.
+    // false면 안보낸다.
+
+    let oddNum = [];
+    let evenNum = [];
+
+    for (i = 0; i < nums.length; i++) {
+        if (nums[i] % 2 == 0) {
+            evenNum.push(nums[i]);
+        } else {
+            oddNum.push(nums[i]);
+        }
+    }
+    console.log(oddNum);
+    console.log(evenNum);
+
+
+    oddNum = nums.filter((n) => n % 2 == 1); //배열로 반환
+    evenNum = nums.filter((n) => n % 2 == 0); //배열로 반환
+    console.log(oddNum);
+    console.log(evenNum);
+
+    // 자바는 화살표가 -> 하나
+    nums.filter((n) => n % 2 == 1)  // 배열로 반환한거를
+        .forEach((n) => console.log(n)); // 값으로 출력
+
+    let words = ["school", "hospital", "apple", "peach", "rain", "air", "doll","desk","president",
+                 "survey","assembly"];
+    words.filter(w => w.length>=5)
+        .forEach( w => {console.log(w)});
+
+    words.filter(w => w.length>=5) // 조건을 먼저 하고 
+        .map(w => w.toUpperCase())  // 맵핑하고
+        .forEach( w => {console.log(w)});   // 출력
+    
+
+    // 양수와 음수 분리하기
+    nums = [1,2,-3,4,5,6,7,8,-10,11,12,13,-14,15,-16,17]
+
+    positiveNum = nums.filter((n) => n > 0)
+    positiveNum.forEach((n) => console.log(n));
+
+    console.log(positiveNum) // 이거는 배열로 반환되잖아
+
+    nagativeNum = nums.filter((n) => n < 0).forEach((n) => console.log(n));
+
+    console.log(nagativeNum)  // 이거 반환값은 왜 undefined지, 나는 위처럼 똑같이 출력 될줄 알았는데
+
+</script>

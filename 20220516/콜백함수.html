@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let add = function(x, y){
+        return x + y;
+    }
+    function div(x, y){
+        return x / y;
+    }
+
+    function myfunction(callback, x, y){
+        let result = callback(x, y);
+        console.log(`${x}, ${y}, ${result}`);
+    }
+    myfunction(add, 4, 5); // 함수 표현식
+    myfunction(div, 4, 5); // 함수
+    myfunction((x,y) => x-y, 4, 5); // 화살표함수 
+    myfunction((x,y) => { return x*y }, 4, 5); // 화살표함수
+</script>

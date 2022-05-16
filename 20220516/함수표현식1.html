@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var add = function(a, b){
+        return a + b;
+    }
+    // var add = 7; // 7로 바꿔짐 
+    console.log( add(5,3)); // 여기서 오류남, add는 함수가 아니라고 
+    // let은 변수 중복되면 오류, var는 변수 바뀜
+
+    add = 7;
+    console.log(add);
+
+
+    let sigma = function(limit){
+        let i, s=0;
+        for(i=1; i<limit; i++){
+            s+=i;  // s = s+i 와 동일하다
+        }
+        return sigma;
+    }
+    console.log(sigma());
+    console.log(sigma(100));
+    
+    console.log(sigma(1000));
+</script>
