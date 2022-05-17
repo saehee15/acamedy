@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let students = [
+        {name:"홍길동", kor: 90, eng: 90, mat: 90},
+        {name:"장길산", kor: 80, eng: 75, mat: 60},
+        {name:"임꺽정", kor: 70, eng: 70, mat: 70},
+        {name:"장승업", kor: 80, eng: 80, mat: 70},
+        {name:"홍경래", kor: 50, eng: 100, mat: 80},
+    ] // [] - 배열  {} - 객체
+
+    let s = students[0];
+    console.log(s); //애 자체가 json
+    console.log( s.name, s.kor );
+
+    console.log(  students[4].name, students[4]["name"] );
+    console.log(  students[4].name[0], students[4]["name"][0] );
+
+
+    for(i=0; i<students.length; i++){
+        console.log(students[i].name, students[i].kor, students[i].eng , students[i].mat);
+    }
+
+    for(i in students){
+        console.log(students[i].name, students[i].kor, students[i].eng , students[i].mat);
+    }
+
+    for(s of students){
+        console.log(s.name, s.kor, s.eng, s.mat);
+    }
+
+
+
+
+    let data = {"name": ["홍길동", "임격정", "장길산"]} // 이렇게도 쓸수있음
+
+    console.log( data.name[0] );
+    console.log( data.name[1] );
+    console.log( data.name[2] );
+
+    for(i in data.name){
+        console.log(data.name[i])
+    }
+</script>

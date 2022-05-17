@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // 배열이 3차가 넘어가면 객체나 json 구조로 씀
+
+
+    let array = [3,5,8,6,7,11,15,14,22];
+
+
+    let result = array.map( (x) => {return x*x} )
+    console.log(result); 
+    // 원본데이터는 그대로 있고, 연산을 수행한 결과를 별도로 반환한다.
+    // map 함수는 반드시 반환을 해야한다. 주로 데이터에 연산을 수행하고자 할때 사용한다.
+
+
+    array.map( (item, i) => {
+        console.log(item, i);
+        return item;
+    }) 
+
+    array = [ [1,2,3], [4,5,6], [7,8,9], [10,11,12] ]
+
+    array.map( (item, i) => {
+        console.log(item, i);
+        return item;
+    }) 
+
+    result = array.map( (item, i) => {
+        return item.map( (a, i) => {return a *10} )
+    }); // map한 거를 또 map 하기
+
+    console.log(result);
+
+   
+</script>

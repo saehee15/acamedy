@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="number" value="10"> <br /> 
+    <input type="text" name="number" value="20"> <br /> 
+    <input type="text" name="number" value="30"> <br /> 
+    <input type="text" name="number" value="40"> <br /> 
+    <input type="text" name="number" value="50"> <br /> 
+    <input type="text" name="number" value="60"> <br /> 
+    <input type="text" name="number" value="70"> <br /> 
+</body>
+</html>
+
+<script>
+    var nums = document.getElementsByName("number");
+    sum = 0;
+    for(i=0; i<nums.length; i++){
+        sum += parseInt(nums[i].value);
+    }
+    console.log("합계 :" + sum);
+
+    // in 구문 사용 불가
+    // for(i in nums){
+    //     sum += nums[i];
+    // }
+    // console.log("합계 :" + sum);
+
+    // of 구문
+    sum = 0;
+    for(i of nums){
+        sum += parseInt(i.value);
+    }
+    console.log("합계 :" + sum);
+
+    // forEach
+    sum = 0;
+    nums.forEach((i)=>{
+        sum += parseInt(i.value);
+    })
+    console.log("합계 :" + sum);
+</script>

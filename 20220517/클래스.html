@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //클래스 정의 앞에는 let이나 var 쓰면 안 된다.
+    // class User {
+    //     //생성자 - 객체가 생성될 때 무조건 호출된다. 사용자가 안 만들면 만들어서라도 호출.
+    //               //자바스크립트는 생성자를 하나만 만들 수 있다. 다른 언어는 여러개 만들 수 있음.
+    //     constructor()
+    //     {
+    //         console.log("생성자호출");
+    //     }
+    // }
+
+    // //객체 생성하기
+    // let user = new User();    //정의 부분이라 아직 메모리 쓰지 않음. 그래서 let이나 var 못씀.
+
+
+    //클래스란, 사용자가 자신의 필요에 의해서 관련있는 변수와 함수들을 묶어서 새로운 타입을 만드는 것.
+    class User {       //User라는 타입 만든 것.   
+        constructor(name="홍길동", phone="010-0000-0000", address="") //매개변수가 3개
+        {
+            //객체 내의 변수 선언
+            this.name=name;
+            this.phone=phone;
+            this.address=address;
+
+            console.log("생성자호출");
+        }
+        display(){  //클래스 안에 쓰는 함수는 function도 안 씀
+            console.log(this.name, this.phone, this.address);
+        }
+    }
+
+
+    //객체 생성하기
+    let user = new User();
+    user.display();
+
+    //매개변수가 3개라서 생성 4가지 할 수 있음. 객체 생성 방법을 매개변수로 주면 4가지 존재. constructor 하나로 다양하게 사용.
+    user = new User("장길산");
+    user.display();
+
+    user = new User("조승연", "010-0000-1111");
+    user.display();
+
+    user = new User("김정하", "010-2222-3333", "서울시");
+    user.display();
+
+</script>

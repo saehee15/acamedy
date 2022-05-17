@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // 몽고DB joson형태로 자료 저장
+    
+    let person = {"name": "홍길동", age: 23, phone: "010-0000-0000", kor: 90, eng: 80, mat: 60};
+
+    console.log( person.name, person.age, person.phone );
+    console.log( person["name"], person["age"], person["phone"]);
+
+    for( const [key, value] of Object.entries(person)){
+        console.log( `${key} : ${value}` );
+    }
+
+    // 새로운 속성 추가하기
+    person.total = person.kor + person.eng + person.mat;
+    console.log(person.total);
+    console.log(person);
+    
+
+
+    // 전개
+    // json {}
+    let {name, age, phone} = person;
+    console.log(name, age, phone);
+
+    // 배열 []
+    // let [name, age] = ["Tom, "23"];
+    // console.log(name, age);
+
+
+    let {kor, eng} = person;
+    console.log(kor, eng);
+
+</script>

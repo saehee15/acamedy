@@ -39,14 +39,15 @@
     // });
 
 
-    // 리팩토링
     for (i = 1; i <= 4; i++) {
-        var c = document.getElementById(i);
+        let c = document.getElementById(i);
         color = c.innerHTML
-        console.log(c.innerHTML)
+        console.log(c, color)
         
-        c.addEventListener("click", () => {
-            document.body.style.background = color // color 파란색만 가져옴
+        c.addEventListener("click", (e) => {
+            let color = e.target.innerHTML
+            console.log(color)
+            document.body.style.background = color
         });
 
     }

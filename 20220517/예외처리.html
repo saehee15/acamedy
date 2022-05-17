@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예외처리</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let data1 = {"name":"홍길동", age:12}; //이건 json 객체
+    let data2 = '{"name":"홍길동", "age":12}'; //json이 아니라 json 형태를 한 문자열이다. 문자로 전환했을 때는 따옴표 빠지면 안 됨!
+    // console.log(data1.name, data1.age);
+    // console.log(data2.name, data2.age); //undefined. json이 아니라 문자열이라서.
+
+    //json <-> string 함수
+    data2 = JSON.parse(data2); //string -> json 
+    data1 = JSON.stringify(data1); //json -> string
+    console.log(data1.name, data1.age); //undefined
+    console.log(data2.name, data2.age);
+                                        //json형태의 문자열을 json으로 바꿔주는 게 parse.
+
+    //예외처리를 해보자
+    let json="{bad jason}";
+    //let user = JSON.parse(json);   //예외처리
+    try{
+        let user = JSON.parse(json);
+        alert(user.name);
+    }
+    catch(e)
+    {
+        console.log(e.message);
+    }
+    //에러 메시지: Unexpected token b in JSON at position 1
+    //예외 처리 안 했을 땐 그냥 에러
+
+
+</script>

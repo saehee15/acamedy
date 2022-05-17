@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //filter랑 비슷하나, 조건 중 첫 번째 요소의 값만 반환
+
+    array = [3, 5, 8, 6, 7, 11, 15, 14, 22];
+
+    // 1번
+    result = array.find((x) => {
+        return x % 2 == 0
+    });
+    console.log(result);  // 8
+
+
+    // 2번
+    result = array.find((x) => {
+        if (x % 2 == 0) return x
+    });
+    console.log(result);  // 8
+
+
+
+    let words = ["school", "hospital", "sun", "star", "moon", "search", "peach"];
+
+    result = words.filter( (s) => {if(s[0] == 's') return s;});
+    console.log(result);
+
+    result = words.find( (s) => {if(s[0] == 's') return s;});
+    console.log(result);
+
+</script>

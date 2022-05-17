@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="blue">제목1</h1>
+    <h1 class="blue">제목2</h1>
+    <h1 class="blue">제목3</h1>
+    <h1 class="blue">제목4</h1>
+    <h1 class="red">제목5</h1>
+    <h1 class="red">제목6</h1>
+    <h1 class="red">제목7</h1>
+    <h1 class="red">제목8</h1>
+
+</body>
+</html>
+<script>
+    // for문 of, forEach 글자색을 blue와 red로
+    // 내가
+    var blueC = document.getElementsByClassName("blue");
+    var redC = document.getElementsByClassName("red");
+
+    // for(i=0; i<blueC.length; i++){
+    //     blueC[i].style.color = "blue";
+    //     redC[i].style.color = "red";
+    // }
+
+    // for(i of blueC){
+    //     i.style.color = "blue";
+    // }
+    // for(i of redC){
+    //     i.style.color = "red";
+    // }
+
+    
+    // foreach는 바로 안되고, 이렇게 해야하네
+    // Array.from(blueC).forEach((i) => {
+    //     i.style.color = "blue";
+    // });
+    // Array.from(redC).forEach((i) => {
+    //     i.style.color = "red";
+    // });
+
+
+    // 선생님
+    var blues = document.getElementsByClassName("blue");
+    var reds = document.querySelectorAll(".red"); //querySelectorAll foreach가능
+    console.log(blues) // prototype이 HTMLCollection, foreach array라 안된데
+    // 그래서 내가 위에 한거를 Array.from(redC).forEach((i) redC를 받아서 배열로 바꾼다음
+    // forEach 하면 되는구낭 
+
+    // for(i=0; i<blues.length; i++){
+    //     blues[i].style.color = "blue";
+    // }
+
+    // for(i in blues){
+    //     blues[i].style.color = "blue";
+    // }
+
+    // for(ob of blues){
+    //     ob.style.color = "blue";
+    // }
+
+
+    //문제1.html:65 Uncaught TypeError: blues.foreach is not a function
+    // blues.foreach((ob)=>{
+    //     ob.style.color = "blue";
+    // })
+
+    // console.log(reds)
+    reds.forEach((ob)=>{
+        ob.style.color = "red";
+    })
+
+</script>
