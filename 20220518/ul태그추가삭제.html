@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="product" id="product">
+    <button id="btnAdd">추가</button>
+    <button id="btnDel">삭제</button> <br/>
+    <ul id="coffee">
+        <li>카카오</li>
+    </ul>
+</body>
+</html>
+<script>
+    window.onload = () =>{
+        document.getElementById("btnAdd").addEventListener("click", fnAdd);
+        document.getElementById("btnDel").addEventListener("click", fnDel);
+    }
+    function fnAdd(){
+        if(document.getElementById("product").value.trim().length == 0){ // tirm 양쪽 공백 삭제
+            alert("데이터를 입력하세요");
+            document.getElementById("product").value = ""; // 공백 눌렀을때 남아있는거 지우기
+            return; // 값을 보내기도 하지만 함수를 종료한다.
+        }
+        var coffee = document.getElementById("coffee");
+        var child = document.createElement("li");
+        child.innerHTML = document.getElementById("product").value;
+        coffee.appendChild(child);
+        document.getElementById("product").value = "";  // 추가 후 input 초기화
+    }
+    function fnDel(){
+        var coffee = document.getElementById("coffee");
+        console.log(coffee.children.length);
+        if(coffee.children.length > 1){
+            coffee.removeChild(coffee.lastChild);
+        } else {
+            alert("더 이상 삭제 불가");
+        }
+    }
+</script>

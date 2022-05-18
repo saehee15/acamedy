@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>눌러봐라 나 사라진다.</p>
+    <p>나도</p>
+    <p>나도3</p>
+
+    <button id="btnShow">모두 나타나라</button>
+</body>
+
+</html>
+<script>
+    //    $(document).ready(function(){
+    //         $("p").click(function(){
+    //             $(this).hide();
+    //         });
+    //     });
+
+    $(function () {
+        // 화살표 함수에서 this 안먹힘
+        $("p").click(function(){
+            $(this).hide();
+        });
+
+        $("#btnShow").click(function() {
+            $("P").show();
+        })
+        // 제이쿼리 name 쓸때는 복수로 취급해서 복잡
+    });
+</script>

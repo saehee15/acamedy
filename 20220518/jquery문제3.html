@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    이름 : <input type="text" id="name"> <br/>
+    국어 : <input type="text" id="kor"> <br/>
+    영어 : <input type="text" id="eng"> <br/>
+    수학 : <input type="text" id="mat"> <br/>
+    ----------------------------------------- <br/>
+    총점 : <input type="text" id="total"> <br/>
+    평균 : <input type="text" id="avg"> <br/>
+
+    <button id="btnResult">결과확인</button>
+</body>
+</html>
+<script>
+    $(function(){
+
+      //내가, 선생님
+      $("#btnResult").click(function(){
+          var kor = $("#kor").val();
+          var eng = $("#eng").val();
+          var mat = $("#mat").val();
+          var total = parseInt(kor) + parseInt(eng) + parseInt(mat);
+          var avg = total /3 ;
+
+          $('#total').val(total);
+          $('#avg').val(avg);
+      })
+
+    })
+</script>

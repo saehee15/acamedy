@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1> show() / hide() </h1>
+    <p>없앨 태그</p>
+
+    <button id="btnhide">사라져라</button>
+    <button id="btnShow">나타나라</button>
+</body>
+
+</html>
+<script>
+     $(function () {
+        $("#btnhide").click(function() {
+            $("P").hide();
+        })
+        1
+
+        $("#btnShow").click(function() {
+            $("P").show();
+        })
+    });
+    
+</script>

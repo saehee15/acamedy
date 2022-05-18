@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1 id="msg">속성 변경</h1>
+
+    <button style="color: blue">블루</button> <br/>
+    <button style="color: pink">핑크</button> <br/>
+    <button style="color: yellow">엘로우</button> <br/>
+    <button style="color: green">그린</button> <br/>
+    <button style="color: purple">퍼플</button> <br/>
+
+</body>
+</html>
+<script>
+    $(function(){
+        $("button").click(function(){
+            // 스타일은 CSS메서드 그 밖의 속성은 prop함수로
+            var color = $(this ).css( "color" )
+
+            console.log(color)
+            $("#msg").css("color", color);
+        })
+
+    })
+</script>

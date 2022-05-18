@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>addEventListener</h2>
+    <p>카멜(낙타)표기법 - 함수나 변수 만들 때 첫글자는 소문자로 새로운 단어 시작되면 대문자로 , js</p>
+    <p>스네이크표기법 - 함수나 변수 만들 때 모두 소문자로 새로운 단어 시작되면 _로 만든다.
+        add_event_listener, css에서 많이 씀</p>
+    
+    <button id="myBtn"> 누르세요 </button>
+</body>
+
+</html>
+<script>
+    window.onload = () => {
+        let myBtn = document.getElementById("myBtn")
+        myBtn.addEventListener("click", ()=>{
+            console.log("첫번째 함수 호출");
+        })
+
+        myBtn.addEventListener("click", ()=>{
+            console.log("두번째 함수 호출");
+        })
+
+        myBtn.addEventListener("click", ()=>{
+            console.log("세번째 함수 호출");
+        })
+    }
+</script>

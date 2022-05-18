@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    값1 : <input type="text" id="xValue"> <br/>
+    값2 : <input type="text" id="yValue"> <br/>
+    결과 : <input type="text" id="result"> <br/>
+
+    <button id="btnAdd">더하기</button>
+    <button id="btnSub">빼기</button>
+    <button id="btnMul">곻하기</button>
+    <button id="btnDiv">나누기</button>
+</body>
+</html>
+<script>
+    $(function(){
+
+
+        // 내가
+        // $("#btnAdd").click(function(){
+        //     x = $("#xValue").val();
+        //     x1 = parseInt(x)
+        //     y = $("#yValue").val();
+        //     y1 = parseInt(y);
+
+        //     $('#result').val(x1+y1);
+        // })
+        
+
+        $("#btnSub").click(function(){
+            x = $("#xValue").val();
+            x1 = parseInt(x)
+            y = $("#yValue").val();
+            y1 = parseInt(y);
+
+            $('#result').val(x1-y1);
+        })
+
+        $("#btnMul").click(function(){
+            x = $("#xValue").val();
+            x1 = parseInt(x)
+            y = $("#yValue").val();
+            y1 = parseInt(y);
+
+            $('#result').val(x1*y1);
+        })
+
+        
+        $("#btnDiv").click(function(){
+            x = $("#xValue").val();
+            x1 = parseInt(x)
+            y = $("#yValue").val();
+            y1 = parseInt(y);
+
+            $('#result').val(x1 /y1);
+        })
+
+        
+        // 선생님
+        $("#btnAdd").click(function(){
+           var x = $("#xValue").val();
+           var y = $("#yValue").val();
+           var result = parseInt(x) + parseInt(y);
+
+            $('#result').val(result);
+        })
+
+
+    })
+</script>
